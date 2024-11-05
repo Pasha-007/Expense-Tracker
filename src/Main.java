@@ -1,5 +1,6 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import javax.swing.text.html.Option;
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
@@ -13,6 +14,7 @@ public class Main {
             action = scanner.nextLine();
             if(action.equalsIgnoreCase("Login")){
                 auth.Login();
+                Options.userChoice();
                 break;
             } else if (action.equalsIgnoreCase("Signup")) {
                 auth.Signup();
