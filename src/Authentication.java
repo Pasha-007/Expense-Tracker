@@ -6,8 +6,10 @@ public class Authentication {
     private HashMap<String, String> users = new HashMap<String, String>();
     private Scanner scanner = new Scanner(System.in);
     private final String filePath = "src/users.txt";
+    private String currentUser;
 
     public Authentication() {
+
         loadUsers();
     }
 
@@ -44,16 +46,23 @@ public class Authentication {
         saveUser(name, password);
         Login();
     }
-    public void Login(){
+    public boolean Login() {
         System.out.println("You can Login");
         System.out.println("Enter Name: ");
         String input = scanner.nextLine();
         System.out.println("Enter Pass: ");
         String input2 = scanner.nextLine();
-        if(users.containsKey(input) && users.get(input).equals(input2)){
+        if (users.containsKey(input) && users.get(input).equals(input2)) {
             System.out.println("You are logged in");
-        }else{
-            System.out.println("Ivalid Username or Password");
+            currentUser = input;
+            return true;
+        } else {
+            System.out.println("Invalid Username or Password");
+            return false;
         }
+    }
+
+    public String getCurrentUser() {
+        return currentUser;
     }
 }

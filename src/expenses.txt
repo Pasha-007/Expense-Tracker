@@ -1,0 +1,4 @@
+pasha,500.0,purse,2024-02-12
+pasha,200.0,mouse,2024-03-12
+pasha,100.0,coffee,2024-10-10
+pasha,1000.0,phone,2024-01-01
